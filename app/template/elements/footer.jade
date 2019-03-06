@@ -1,0 +1,78 @@
+footer.footer
+    .container
+
+        .footer__top
+
+            .footer__contacts
+                h3.footer__title Provozovna
+                p.footer__descr
+                    | S.I.C. spol. s r.o.
+                    br
+                    | Mečislavova 164/7
+                    br
+                    | Praha 4, 140 00
+
+                h3.footer__title Kontakt
+                label.footer__label Prodej:
+                a(href='#').footer__email sales@sic.cz
+                a(href='#').footer__phone +420 222 505 045
+
+                label.footer__label Servis:
+                a(href='#').footer__email servis@sic.cz
+
+            .footer__bank
+                h3.footer__title Kde nás najdete
+                label.footer__label Fakturační údaje:
+                p.footer__descr
+                    | S.I.C. spol. s r.o.
+                    br
+                    | Na Folimance 2155/15
+                    br
+                    | Praha 2, 120 00
+
+                p.footer__descr
+                    span IČO:
+                    |  25132253
+                p.footer__descr
+                    span DIČ:
+                    |  CZ25132253
+
+                p.footer__descr
+                    | Firma je zapsána v OR
+                    br
+                    | vedeném MS v Praze
+                    br
+                    | oddíl C vložka 52378
+
+            .footer__text
+                h3.footer__title Need fast consultation?
+                label.footer__label Please, enter you phone number and we’ll call you back
+                form#footer-form.footer__form
+                    textarea#footer-textarea(required='true').footer__textarea
+                    input(type='submit' value='Odeslat').footer__submit
+
+            .footer__socials
+                .footer__socials--wrapper
+                    a(href='#').footer__socials--link.inst
+                    a(href='#').footer__socials--link.fb
+                    a(href='#').footer__socials--link.tw
+
+
+
+        p.footer__art Copyright © 2018 S.I.C. spol. s r.o. Všechna práva vyhrazena.
+
+a(href='#')#go-top.go__top
+    i.fa.fa-chevron-up.
+
+script.
+    function initMap() {
+        var uluru = {lat: 50.06366, lng: 14.44400};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 14,
+            center: uluru
+        });
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+        });
+    }

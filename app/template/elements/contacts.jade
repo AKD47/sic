@@ -1,0 +1,28 @@
+section#contacts.contacts
+    .container
+        h3.contacts__title Nás kontaktovat
+        p.contacts__subtitle Zde nás kontaktovat pomocí kontaktního formuláře
+
+        form#contacts-form.contacts__form
+
+            .contacts__form-box
+
+                label.contacts__form-label Vaše jméno *
+                input#contacts-name.contacts__field(type='text' name='name' placeholder='' autocomplete="off" required='true')
+
+                label.contacts__form-label Váš email *
+                input#contacts-email.contacts__field(type='text' name='email' placeholder='' autocomplete="off" required='true')
+
+            .contacts__form-box
+
+                label.contacts__form-label Text zprávy *
+                textarea#contacts-textarea.contacts__textarea(required='true')
+
+            input.contacts__submit(type='submit' value='Odeslat')
+
+    .contacts__map
+        .contacts__map--hover
+            a(href='#').contacts__map--trigger
+                span.icon
+                span.descr Open map
+        #map

@@ -1,0 +1,65 @@
+.top-banner {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 100vh;
+  background-image: url('../img/top-banner.png');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+
+  &__title-box {
+    position: absolute;
+    width: 100%;
+    height: 350px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+
+    @include breakpoint(max-width 660px) {
+      height: 200px;
+    }
+  }
+
+  &__title {
+    position: relative;
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    font-family: $Montserrat;
+    color: #fffefe;
+    font-size: 167px;
+    font-weight: 300;
+
+    @include breakpoint(max-width 660px) {
+      font-size: 60px;
+    }
+
+    span {
+      position: relative;
+      float: left;
+      width: 100%;
+      text-align: center;
+      font-size: 97px;
+      font-weight: 100;
+
+      @include breakpoint(max-width 660px) {
+        font-size: 40px;
+      }
+    }
+  }
+
+  &__subtitle {
+    position: relative;
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 0;
+    color: white;
+    font-family: $Roboto;
+    font-size: 18px;
+    font-weight: 300;
+  }
+}

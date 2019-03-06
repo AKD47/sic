@@ -1,0 +1,217 @@
+.internet {
+  position: relative;
+  float: left;
+  width: 100%;
+
+  &__title {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 84px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ed1c24;
+    font-family: $Montserrat;
+    font-size: 46px;
+    font-weight: 400;
+  }
+
+  &__subtitle {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 76px;
+
+    > p {
+      position: relative;
+      float: left;
+      width: 100%;
+      margin: 0;
+      text-align: center;
+      color: #3d3d3d;
+      font-family: $Roboto;
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+
+  &__title-types {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    > p {
+      position: relative;
+      float: left;
+      width: 100%;
+      margin: 0;
+      text-align: center;
+      color: #3d3d3d;
+      font-family: $Roboto;
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+
+  &__price-title {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 58px;
+    text-align: center;
+    color: #424242;
+    font-family: $Roboto;
+    font-size: 37px;
+    font-weight: 400;
+  }
+
+  &__wrapper {
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include justify-content(space-between);
+    position: relative;
+    float: left;
+    width: 100%;
+
+    &--item {
+      position: relative;
+      float: left;
+      width: 170px;
+      margin: 0 50px;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      padding-left: 26px;
+      padding-right: 26px;
+      @include border-box;
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 9px 23px rgba(0, 0, 0, 0.1);
+      text-align: center;
+
+      @include breakpoint(max-width 1024px) {
+        margin: 0 10px;
+      }
+
+      @include breakpoint(max-width 770px) {
+         width: calc(50% - (10px * 2));
+         width: -moz-calc(50% - (10px * 2));
+         margin: 10px 10px;
+       }
+
+      @include breakpoint(max-width 660px) {
+        width: calc(100% - (10px * 2));
+        width: -moz-calc(100% - (10px * 2));
+        margin: 10px 10px;
+      }
+
+      .speed {
+        position: relative;
+        float: left;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: center;
+        color: #8f8f8f;
+        font-family: $Montserrat;
+        font-size: 48px;
+        font-weight: 500;
+      }
+
+      .speed-label {
+        position: relative;
+        float: left;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: center;
+        color: #7f7f7f;
+        font-family: $Montserrat;
+        font-size: 14px;
+        font-weight: 500;
+        font-style: italic;
+      }
+
+      .line {
+        position: relative;
+        float: left;
+        width: 100%;
+        height: 3px;
+        background-color: red;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        
+        &.yellow {
+          background-image: url('../img/icons/y-line-icon.png');
+          background-repeat: no-repeat;
+          -webkit-background-size: cover;
+          background-size: cover;
+        }
+
+        &.green {
+          background-image: url('../img/icons/g-line-icon.png');
+          background-repeat: no-repeat;
+          -webkit-background-size: cover;
+          background-size: cover;
+        }
+
+        &.blue {
+          background-image: url('../img/icons/b-line-icon.png');
+          background-repeat: no-repeat;
+          -webkit-background-size: cover;
+          background-size: cover;
+        }
+      }
+
+      .price {
+        position: relative;
+        float: left;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: center;
+        color: #393939;
+        font-family: $Montserrat;
+        font-size: 53px;
+        font-weight: 500;
+        line-height: 43px;
+      }
+
+      .price-currency {
+        position: relative;
+        float: left;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        color: #2c2c2c;
+        font-family: $Montserrat;
+        font-size: 26px;
+        font-weight: 300;
+      }
+    }
+  }
+
+  &__not {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 38px;
+    margin-bottom: 115px;
+
+    > p {
+      position: relative;
+      float: left;
+      width: 100%;
+      margin: 0;
+      text-align: center;
+      color: #959595;
+      font-family: $Roboto;
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+}

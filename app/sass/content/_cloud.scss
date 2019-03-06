@@ -1,0 +1,84 @@
+.cloud {
+  position: relative;
+  float: left;
+  width: 100%;
+
+  &__wrapper {
+    position: relative;
+    float: left;
+    width: 100%;
+  }
+
+  &__banner {
+    position: relative;
+    float: left;
+    width: 50%;
+    margin-top: 164px;
+
+    @include breakpoint(max-width 770px) {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  &__descr {
+    position: relative;
+    float: left;
+    width: 50%;
+
+    @include breakpoint(max-width 770px) {
+      width: 100%;
+    }
+    
+    &--icon {
+      position: relative;
+      float: right;
+      margin-top: 80px;
+      width: 283px;
+      height: 168px;
+      overflow: hidden;
+      background-image: url('../img/cloud.png');
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
+
+      @include breakpoint(max-width 770px) {
+        float: left;
+      }
+
+      @include breakpoint(max-width 660px) {
+        display: none;
+      }
+    }
+
+    &--title {
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 0;
+      margin-bottom: 24px;
+      text-align: left;
+      color: #ed1c24;
+      font-family: $Montserrat;
+      font-size: 46px;
+      font-weight: 400;
+    }
+
+    > p {
+      position: relative;
+      float: left;
+      width: 100%;
+      text-align: justify;
+      margin-top: 0;
+      margin-bottom: 20px;
+      color: #222;
+      font-family: $Roboto;
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+}

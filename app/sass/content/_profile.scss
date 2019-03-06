@@ -1,0 +1,172 @@
+.profile {
+  position: relative;
+  float: left;
+  width: 100%;
+
+  &__title {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 85px;
+    margin-bottom: 0;
+    color: #ed1c24;
+    font-family: $Montserrat;
+    font-size: 46px;
+    font-weight: 400;
+  }
+
+  &__subtitle {
+    position: relative;
+    float: left;
+    width: 586px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #6c6c71;
+    font-family: $Roboto;
+    font-size: 14px;
+    font-weight: 300;
+
+    @include breakpoint(max-width 770px) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 670px;
+
+    @include breakpoint(max-width 770px) {
+      @include display-flex(flex);
+      @include flex-wrap(wrap);
+      @include flex-direction(row);
+      min-height: 100%;
+    }
+
+    &--element {
+      position: relative;
+      float: left;
+      width: 533px;
+      padding: 30px;
+      @include border-box;
+      background-color: white;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+      @include breakpoint(max-width 770px) {
+        width: 100%;
+      }
+
+      p {
+        position: relative;
+        float: left;
+        width: 100%;
+        margin: 0;
+        color: #37373a;
+        font-family: $Roboto;
+        font-size: 15px;
+        font-weight: 400;
+        opacity: 0.6;
+        @include transition(0.4s);
+      }
+
+      &.first {
+        background-image: url('../img/1-bg.png');
+        background-repeat: no-repeat;
+        background-position: 14px 11px;
+
+        @include breakpoint(max-width 770px) {
+          order: 1;
+        }
+      }
+
+      &.second {
+        position: absolute;
+        top: 120px;
+        left: 300px;
+        background-image: url('../img/2-bg.png');
+        background-repeat: no-repeat;
+        background-position: 95% 95%;
+        z-index: 1;
+
+        @include breakpoint(max-width 770px) {
+          order: 2;
+          position: relative;
+          left: inherit;
+          top: inherit;
+          background-position: 14px 11px;
+        }
+      }
+
+      &.third {
+        position: absolute;
+        right: 0;
+        top: -92px;
+        background-image: url('../img/3-bg.png');
+        background-repeat: no-repeat;
+        background-position: 14px 11px;
+        z-index: 1;
+
+        @include breakpoint(max-width 1024px) {
+          top: 0;
+        }
+
+        @include breakpoint(max-width 770px) {
+          order: 3;
+          position: relative;
+          right: inherit;
+          top: inherit;
+          background-position: 14px 11px;
+        }
+      }
+
+      &.forth {
+        position: absolute;
+        left: 50px;
+        top: 272px;
+        background-image: url('../img/4-bg.png');
+        background-repeat: no-repeat;
+        background-position: 14px 11px;
+        z-index: 1;
+
+        @include breakpoint(max-width 770px) {
+          order: 4;
+          position: relative;
+          left: inherit;
+          top: inherit;
+          background-position: 14px 11px;
+        }
+      }
+
+      &.fifth {
+        position: absolute;
+        right: 0;
+        top: 183px;
+        background-image: url('../img/5-bg.png');
+        background-repeat: no-repeat;
+        background-position: 95% 95%;
+        z-index: 1;
+
+        @include breakpoint(max-width 770px) {
+          order: 5;
+          position: relative;
+          top: inherit;
+          left: 0;
+          right: inherit;
+          background-position: 14px 11px;
+        }
+      }
+
+      &.js-active-element {
+        z-index: 5;
+
+        p {
+          opacity: 1;
+          @include transition(0.4s);
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,10 @@
+//top menu nixin
+mixin top-menu(options_list, ref_list)
+    //задаем параметр подписи(options_list) для опций и параметры для пути ссылок(ref_list)
+    ul.header__nav
+        for option, index in options_list
+            //в цыкле для options_list мы задаем опцию и путь ссылки
+            li
+                a(href=ref_list[index])=option
+                //в теге "a" в href мы передаем пути ссылки а тело текст(option)
+

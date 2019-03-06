@@ -1,0 +1,219 @@
+.video {
+  position: relative;
+  float: left;
+  width: 100%;
+
+  &__banner {
+    position: relative;
+    float: left;
+    width: 100%;
+    background-image: url('../img/middle-banner.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+
+    > h3 {
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 108px;
+      margin-bottom: 10px;
+      text-align: center;
+      color: white;
+      font-family: $Montserrat;
+      font-size: 46px;
+      font-weight: 300;
+      word-break: break-all;
+
+      @include breakpoint(max-width 660px) {
+        font-size: 36px;
+      }
+    }
+
+    > p {
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 0;
+      margin-bottom: 100px;
+      text-align: center;
+      color: white;
+      font-family: $Roboto;
+      font-size: 17px;
+      font-weight: 300;
+    }
+  }
+
+  &__box {
+    position: relative;
+    float: left;
+    width: 100%;
+  }
+
+  &__not {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 23px;
+    margin-bottom: 30px;
+
+    > p {
+      position: relative;
+      float: left;
+      width: 100%;
+      margin: 0;
+      text-align: center;
+      color: #454545;
+      font-family: $Roboto;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+
+  &__tabs {
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include justify-content(space-between);
+    position: relative;
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @include breakpoint(max-width 770px) {
+      width: 220px;
+      @include flex-direction(column);
+    }
+
+    @include breakpoint(max-width 660px) {
+      width: 140px;
+      @include flex-direction(column);
+    }
+
+    li {
+      position: relative;
+      flex: 1 0 0;
+
+      a {
+        @include display-flex(flex);
+        @include flex-wrap(wrap);
+        @include flex-direction(row);
+        @include justify-content(center);
+        @include align-content(baseline);
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        float: left;
+        width: calc(100% - 10px);
+        width: -moz-calc(100% - 10px);
+        height: 100%;
+        padding: 6px 0;
+        @include border-box;
+        text-align: center;
+        color: #393939;
+        font-family: $Roboto;
+        font-size: 11px;
+        font-weight: 500;
+        text-transform: uppercase;
+        background: transparent;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.17);
+        @include transition(0.4s);
+
+        @include breakpoint(max-width 770px) {
+         margin-bottom: 5px;
+        }
+
+        &:hover, &.video__tabs--active {
+          color: #fff;
+          background: linear-gradient(to top, #cb356b 0%, #ed1c24 100%);
+          box-shadow: 0 7px 10px rgba(0, 0, 0, 0.21);
+          @include transition(0.4s);
+        }
+      }
+    }
+  }
+
+  &__tabs-wrapper {
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 380px;
+    margin-bottom: 180px;
+
+    @include breakpoint(max-width 770px) {
+      width: calc(100% - 220px);
+      width: -moz-calc(100% - 220px);
+      padding: 0 20px;
+      @include border-box;
+      margin-bottom: 0;
+    }
+
+    @include breakpoint(max-width 660px) {
+      width: calc(100% - 140px);
+      width: -moz-calc(100% - 140px);
+    }
+
+    &--box {
+      position: relative;
+      float: left;
+      width: 100%;
+    }
+
+    &--item {
+      position: relative;
+      float: left;
+      width: 100%;
+
+      > h3 {
+        position: relative;
+        float: left;
+        width: 100%;
+        margin-top: 44px;
+        margin-bottom: 22px;
+        text-align: left;
+        color: #454545;
+        font-weight: 400;
+        font-family: $Montserrat;
+        font-size: 22px;
+
+        @include breakpoint(max-width 660px) {
+          word-break: break-all;
+        }
+      }
+
+      > p {
+        position: relative;
+        float: left;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 17px;
+        text-align: justify;
+        color: #454545;
+        font-weight: 400;
+        font-family: $Roboto;
+        font-size: 14px;
+      }
+
+      > ul {
+        position: relative;
+        float: left;
+        width: 100%;
+
+        li {
+          position: relative;
+          float: left;
+          width: 100%;
+          text-align: left;
+          color: #454545;
+          font-weight: 400;
+          font-family: $Roboto;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

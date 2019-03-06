@@ -1,0 +1,17 @@
+header.header
+    .container
+
+        a(href="/").header__logo
+            img(src='img/top-logo.png' alt='logo')
+
+        nav.header__navigation
+
+            a#mobile-menu.header__trigger
+                span
+                span
+                span
+
+            //    вызов миксина в переменную 'list' с указаним элементов массива(названий страниц)
+            - var list = ['Profil společnosti', 'Big Cloud', 'IT řešení', 'Internet', 'Videokonference', 'Audiokonference', 'Kontakty'];
+            - var link = ['#profile', '#cloud', '#it-solutions', '#internet', '#video', '#audio', '#contacts'];
+                +top-menu(list, link)

@@ -1,0 +1,138 @@
+.header {
+
+  &__navigation {
+    position: relative;
+    float: left;
+    width: calc(100% - 155px);
+    width: -moz-calc(100% - 155px);
+
+    @include breakpoint(max-width 660px) {
+      width: 100%;
+    }
+  }
+
+  &__nav {
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include justify-content(space-around);
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    padding: 0;
+    list-style: none;
+
+    @include breakpoint(max-width 770px) {
+      display: none;
+    }
+
+    li {
+      position: relative;
+      float: left;
+
+      @include breakpoint(max-width 770px) {
+        width: 100%;
+      }
+
+      a {
+        position: relative;
+        float: left;
+        width: 100%;
+        color: white;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 13px 12px;
+        @include border-box;
+        background-color: transparent;
+        border-radius: 22px;
+        @include transition(0.4s);
+
+        @include breakpoint(max-width 770px) {
+          text-align: center;
+        }
+        
+        &:hover {
+          background-color: #343434;
+          border-radius: 22px;
+          box-shadow: 2.5px 4.3px 26px rgba(15, 11, 8, 0.5);
+          @include transition(0.4s);
+        }
+      }
+
+      a.js-link-active {
+        background-color: #343434;
+        border-radius: 22px;
+        box-shadow: 2.5px 4.3px 26px rgba(15, 11, 8, 0.5);
+      }
+    }
+  }
+
+  &__trigger {
+    display: none;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 28px;
+    right: 12px;
+    background-image: linear-gradient(to top, #cb356b 0%, #ed1c24 100%);;
+    border-radius: 50%;
+    box-shadow: 1px 1px 10px rgba(255, 255, 255, .4);
+    z-index: 15;
+    cursor: pointer;
+
+    @include breakpoint(max-width 770px) {
+      display: block;
+    }
+
+    @include breakpoint(max-width 660px) {
+      top: -94px;
+    }
+
+    span {
+      display: block;
+      height: 2px;
+      width: 18px;
+      background-color: #fff;
+      position: absolute;
+      left: 50%;
+      margin-left: -9px;
+      top: 50%;
+      margin-top: -1px;
+    }
+
+    span:first-of-type {
+      transition: all 0.2s;
+      margin-top: -6px;
+      content: '';
+    }
+    span:last-of-type {
+      transition: all 0.2s;
+      margin-top: 4px;
+      content: '';
+    }
+  }
+
+  &__trigger.js-trigger-active {
+    background-color: #a1865a;
+
+    span:nth-of-type(2) {
+      display: none;
+    }
+
+    span {
+      background-color: #fff;
+
+      &:first-of-type {
+        transform: rotate(135deg);
+        margin-top: 0;
+      }
+
+      &:last-of-type {
+        transform: rotate(-134deg);
+        margin-top: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,78 @@
+.audio {
+  position: relative;
+  float: left;
+  width: 100%;
+
+  &__banner {
+    position: relative;
+    float: left;
+    width: 100%;
+    background-image: url('../img/call-banner.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+
+  &__title {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    text-align: left;
+    color: white;
+    font-family: $Montserrat;
+    font-size: 46px;
+    font-weight: 300;
+    word-break: break-all;
+
+    @include breakpoint(max-width 660px) {
+      font-size: 36px;
+    }
+  }
+
+  &__subtitle {
+    position: relative;
+    float: left;
+    width: 50%;
+    margin-top: 0;
+    margin-bottom: 110px;
+
+    > p {
+      position: relative;
+      float: left;
+      width: 100%;
+      margin: 0;
+      text-align: center;
+      color: white;
+      font-family: $Roboto;
+      font-size: 17px;
+      font-weight: 300;
+    }
+
+    @include breakpoint(max-width 660px) {
+      width: 100%;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 75px;
+    margin-bottom: 150px;
+
+    p {
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 0;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #3a3a3a;
+      font-family: $Roboto;
+      font-size: 15px;
+      font-weight: 300;
+    }
+  }
+}

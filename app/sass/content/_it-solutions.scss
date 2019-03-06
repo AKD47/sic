@@ -1,0 +1,125 @@
+.it-sol {
+  position: relative;
+  float: left;
+  width: 100%;
+
+  &__title {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 84px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ed1c24;
+    font-family: $Montserrat;
+    font-size: 46px;
+    font-weight: 400;
+  }
+
+  &__subtitle {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    color: #6c6c71;
+    font-family: $Roboto;
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  &__title-types {
+    position: relative;
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-top: 55px;
+    margin-bottom: 33px;
+    color: #2c2c2c;
+    font-family: $Roboto;
+    font-size: 24px;
+    font-weight: 300;
+  }
+
+  &__wrapper {
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include justify-content(space-around);
+    position: relative;
+    float: left;
+    width: 100%;
+
+    &--item {
+      @include display-flex(flex);
+      @include flex-wrap(wrap);
+      @include flex-direction(column);
+      @include align-items(center);
+      position: relative;
+      float: left;
+      width: 25%;
+      height: 196px;
+      padding: 0 40px;
+      @include border-box;
+      margin-bottom: 40px;
+      @include transition(0.4s);
+
+      @include breakpoint(max-width 770px) {
+        width: 100%;
+      }
+
+      &:hover {
+
+        .it-sol__wrapper--img {
+          top: 0;
+        }
+
+        .it-sol__wrapper--shadow {
+          opacity: 1;
+        }
+      }
+    }
+
+    &--img {
+      position: absolute;
+      top: 19px;
+      width: 65px;
+      height: 63px;
+      overflow: hidden;
+      margin-bottom: 14px;
+      @include transition(0.4s);
+
+      > img, svg {
+        width: 100%;
+        height: 100%;
+        -webkit-background-size: contain;
+        background-size: contain;
+      }
+    }
+
+    &--shadow {
+      position: absolute;
+      top: 77px;
+      width: 82px;
+      height: 24px;
+      opacity: 0;
+      background-image: url('../img/shadow.png');
+      background-repeat: no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
+      @include transition(0.4s);
+    }
+
+    &--descr {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 80px;
+      text-align: center;
+      color: #2c2c2c;
+      font-family: $Roboto;
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+}
